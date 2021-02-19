@@ -1,13 +1,18 @@
 package mx.com.softgame.poo1game.pruebas;
-import mx.com.softgame.poo1game.personajes.personaje;
+import mx.com.softgame.poo1game.personajes.Personaje;
 
 public class PruebaPersonaje {
   public static void main(String[] args) {
-    Personaje p1 = new Personaje("Aline", 200);
-    Personaje p2 = new Personaje("Erick", 10);
-    Personaje p3 = new Personaje("Alan", 1);
-    Personaje p4 = new Personaje("Lesly", -10);
-    Personaje p5 = new Personaje("Brian", 500);
+    Personaje p1 = new Personaje("Aline");
+    p1.setEdad(200);
+    Personaje p2 = new Personaje("Erick");
+    p2.setEdad(10);
+    Personaje p3 = new Personaje("Alan");
+    p3.setEdad(1);
+    Personaje p4 = new Personaje("Lesly");
+    p4.setEdad(-10);
+    Personaje p5 = new Personaje("Brian");
+    p5.setEdad(500);
 
     System.out.println(p1.getDetalle());
     System.out.println(p2.getDetalle());
