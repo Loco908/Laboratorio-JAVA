@@ -10,10 +10,12 @@ public class Tablero {
     }
     public static void addPersonaje(Personaje p){
         boolean temp = false;
-        if((idx+ 1)>= 0 && (idx+1) <MAX_LINE){
-            idx++;
-            personajes[idx]=p;
-            return true;
+            try {
+                if((idx+ 1)>= 0 && (idx+1) <MAX_LINE){
+                    idx++;
+                    personajes[idx]=p;
+            } catch (Exception e) {
+                //TODO: handle exception
         }
         
         return temp;
@@ -23,7 +25,6 @@ public class Tablero {
         if((idx- 1)>= 0 && (idx-1) < MAX_LINE){
             idx--;
             personajes[idx]=null;
-            return true;
         }
         
         return temp;
