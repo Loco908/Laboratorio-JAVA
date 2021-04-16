@@ -23,6 +23,8 @@ public class Tablero {
         if((idx- 1)>= 0 && (idx-1) < MAX_LINE){
             idx--;
             personajes[idx]=null;
+        }else{
+            throw new TheException("No es posible borrar el personaje", idx);
         }
         
     }
