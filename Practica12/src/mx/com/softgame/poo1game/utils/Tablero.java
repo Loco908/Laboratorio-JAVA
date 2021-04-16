@@ -1,6 +1,7 @@
 package mx.com.softgame.poo1game.utils;
 import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.utils.TheException;
+
 public class Tablero {
     static int MAX_LINE = 10;
     private static int  idx= -1;
@@ -33,6 +34,8 @@ public class Tablero {
         for(Personaje pe :personajes){
             if(pe!=null){
                 System.out.println(pe.getNombre());
+            }else{
+                System.out.println("-");
             }
         }
 

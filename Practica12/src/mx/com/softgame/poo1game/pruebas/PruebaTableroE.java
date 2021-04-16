@@ -24,10 +24,16 @@ public class PruebaTableroE {
         };
 
         for(Personaje p : arr){
-            if(!Tablero.addPersonaje(p)){
-                        
-                System.out.println("No pudo ser Insertado");
+            try {
+                Tablero.addPersonaje(p);
+            } catch (TheException e) {
+                System.out.println(e+" "+e.getPoss());
             }
+        }
+        try {
+            Tablero.delPersonaje(arr[5]);
+        } catch (TheException e) {
+            System.out.println(e+" "+e.getPoss());
         }
           
         Tablero.showAll(); 
@@ -37,9 +43,7 @@ public class PruebaTableroE {
         System.out.println("................");
         
         for(int j = 0; j <=15; ++j){
-            if(!Tablero.delPersonaje(arr[2])){
-                    System.out.println("No pudo ser eliminado");
-            }
+            Tablero.delPersonaje(arr[2]);
         }    
     }
     
