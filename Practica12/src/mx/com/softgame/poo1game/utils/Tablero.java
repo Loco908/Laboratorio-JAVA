@@ -1,4 +1,4 @@
-package mx.com.softgame.poo1game.Utils;
+package mx.com.softgame.poo1game.utils;
 import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.utils.TheException;
 public class Tablero {

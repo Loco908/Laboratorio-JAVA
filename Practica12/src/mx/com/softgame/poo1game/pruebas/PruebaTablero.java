@@ -2,7 +2,7 @@ package mx.com.softgame.poo1game.pruebas;
 import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.personajes.buenos.Planta;
 import mx.com.softgame.poo1game.personajes.malos.Zombie;
-import mx.com.softgame.poo1game.Utils.Tablero;
+//import mx.com.softgame.poo1game.utils.Tablero;
 
 public class PruebaTablero {
     public static void main(String[]args){
@@ -15,10 +15,6 @@ public class PruebaTablero {
         
       
         for(Personaje p : arr){
-            if(!Tablero.addPersonaje(p)){
-                        
-                System.out.println("No pudo ser Insertado");
-            }
         }
           
         Tablero.showAll(); 
