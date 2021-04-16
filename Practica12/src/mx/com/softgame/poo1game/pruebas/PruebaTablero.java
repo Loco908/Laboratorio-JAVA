@@ -2,7 +2,7 @@ package mx.com.softgame.poo1game.pruebas;
 import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.personajes.buenos.Planta;
 import mx.com.softgame.poo1game.personajes.malos.Zombie;
-//import mx.com.softgame.poo1game.utils.Tablero;
+import mx.com.softgame.poo1game.utils.Tablero;
 
 public class PruebaTablero {
     public static void main(String[]args){

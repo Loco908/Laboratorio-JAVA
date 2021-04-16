@@ -8,7 +8,7 @@ public class TheException extends Exception{
         this.poss = poss;
     }
 
-    public int poss(){
+    public int getPoss(){
         return poss;
     }    
 }

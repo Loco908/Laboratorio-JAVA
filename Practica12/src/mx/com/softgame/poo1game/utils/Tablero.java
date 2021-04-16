@@ -22,10 +22,10 @@ public class Tablero {
     public static void delPersonaje(Personaje p)throws TheException{
         boolean temp = false;
         if((idx- 1)>= 0 && (idx-1) < MAX_LINE){
-            idx--;
             personajes[idx]=null;
+            idx--;
         }else{
-            throw new TheException("No es posible borrar el personaje", idx);
+            throw new TheException("No es posible borrar el personaje", idx-1);
         }
         
     }

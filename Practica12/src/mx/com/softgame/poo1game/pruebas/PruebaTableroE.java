@@ -37,13 +37,15 @@ public class PruebaTableroE {
         }
           
         Tablero.showAll(); 
-        System.out.println("................");
-        Tablero.delPersonaje(arr[2]);
-        Tablero.showAll();
-        System.out.println("................");
         
-        for(int j = 0; j <=15; ++j){
-            Tablero.delPersonaje(arr[2]);
+        for(int j = 0; j <15; ++j){
+            try {
+                Tablero.delPersonaje(arr[j]);
+                
+            } catch (TheException e) {
+                System.out.println(e+" "+e.getPoss());
+                
+            }
         }    
     }
     
