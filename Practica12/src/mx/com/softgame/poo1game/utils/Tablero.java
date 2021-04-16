@@ -1,5 +1,6 @@
 package mx.com.softgame.poo1game.Utils;
 import mx.com.softgame.poo1game.personajes.Personaje;
+import mx.com.softgame.poo1game.utils.TheException;
 public class Tablero {
     static int MAX_LINE = 10;
     private static int  idx= -1;
@@ -8,27 +9,24 @@ public class Tablero {
         this.MAX_LINE = MAX_LINE;
         this.idx = idx;
     }
-    public static void addPersonaje(Personaje p){
+    public static void addPersonaje(Personaje p) throws TheException {
+        System.out.println("No es posible insertar el personaje"+ idx);
+
         boolean temp = false;
-            try {
-                if((idx+ 1)>= 0 && (idx+1) <MAX_LINE){
-                    idx++;
-                    personajes[idx]=p;
-            } catch (Exception e) {
-                //TODO: handle exception
+        if((idx+ 1)>= 0 && (idx+1) <MAX_LINE){
+            idx++;
+            personajes[idx]=p;
         }
-        
-        return temp;
     }
-    public static void delPersonaje(Personaje p){
+    public static void delPersonaje(Personaje p)throws TheException{
         boolean temp = false;
         if((idx- 1)>= 0 && (idx-1) < MAX_LINE){
             idx--;
             personajes[idx]=null;
         }
         
-        return temp;
     }
+
     public static void showAll(){
         for(Personaje pe :personajes){
             if(pe!=null){
