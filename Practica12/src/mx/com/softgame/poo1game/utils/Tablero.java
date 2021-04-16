@@ -8,7 +8,7 @@ public class Tablero {
         this.MAX_LINE = MAX_LINE;
         this.idx = idx;
     }
-    public static boolean addPersonaje(Personaje p){
+    public static void addPersonaje(Personaje p){
         boolean temp = false;
         if((idx+ 1)>= 0 && (idx+1) <MAX_LINE){
             idx++;
@@ -18,7 +18,7 @@ public class Tablero {
         
         return temp;
     }
-    public static boolean delPersonaje(Personaje p){
+    public static void delPersonaje(Personaje p){
         boolean temp = false;
         if((idx- 1)>= 0 && (idx-1) < MAX_LINE){
             idx--;

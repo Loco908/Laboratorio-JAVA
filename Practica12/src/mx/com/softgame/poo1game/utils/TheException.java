@@ -1,12 +1,14 @@
 public class TheException extends Exception{
     public int poss;
 
-    public String Msg(String Msg){
+    public TheException(String Msg, int poss){
+
 
     }
 
-    public int Poss(){
-        
+    public int poss(){
+        return poss;
     }
+    
     
 }
