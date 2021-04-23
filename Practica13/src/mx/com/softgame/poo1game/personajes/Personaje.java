@@ -68,9 +68,16 @@ public abstract class Personaje implements Comparable <Personaje>{
     public int compareTo(Personaje p){
         if(nombre.compareTo(p.nombre)==0){
             return vida-p.vida;
-
         }
-        
+        return nombre.compareTo(p.nombre);   
+    }
+
+    public int hashCode(){
+        return nombre.hashCode()+vida*7;
+    }
+
+    public int getId(){
+        return id;
     }
 
 }
