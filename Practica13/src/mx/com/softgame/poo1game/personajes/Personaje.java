@@ -1,7 +1,9 @@
 package mx.com.softgame.poo1game.personajes;
 import static mx.com.softgame.poo1game.utils.Utileria.*;
+
+import java.util.ArrayList;
 public abstract class Personaje{
-    protected String nombre;
+    protected ArrayList <String> nombre;
     protected int vida;
     protected final int id;
     public Personaje(int id){
