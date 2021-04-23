@@ -67,7 +67,7 @@ public abstract class Personaje implements Comparable <Personaje>{
 
     public int compareTo(Personaje p){
         if(nombre.compareTo(p.nombre)==0){
-            return
+            return vida-p.vida;
 
         }
         
