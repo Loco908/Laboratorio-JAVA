@@ -1,9 +1,8 @@
 package mx.com.softgame.poo1game.personajes;
 import static mx.com.softgame.poo1game.utils.Utileria.*;
-import java.util.ArrayList;
 
-public abstract class Personaje{
-    protected ArrayList <String> nombre;
+public abstract class Personaje implements Comparable <Personaje>{
+    protected String nombre;
     protected int vida;
     protected final int id;
     public Personaje(int id){
@@ -64,6 +63,10 @@ public abstract class Personaje{
     }*/
     public final String getIdVida(){
         return id+" "+vida;
+    }
+
+    public int compareTo(Personaje p){
+        if(nombre)
     }
 
 }
