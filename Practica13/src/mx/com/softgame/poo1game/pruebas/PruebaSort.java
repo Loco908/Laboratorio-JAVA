@@ -1,3 +1,4 @@
+package mx.com.softgame.poo1game.pruebas;
 import java.util.TreeSet;
 import java.util.LinkedList;
 import java.util.Collections;
