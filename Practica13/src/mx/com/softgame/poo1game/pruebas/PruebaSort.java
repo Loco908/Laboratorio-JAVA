@@ -14,6 +14,7 @@ public class PruebaSort{
         ts.add(new Planta("Cristian",70));
         ts.add(new Planta("Karen",50));
         ts.add(new Zombie("Hanna",80,false));
+        ts.add(new Zombie("Erick", false));
         ts.add(new Zombie("Esmeralda",80,false));
         ts.add(new Planta("Miguel", 99));
         ts.add(new Planta("Jaime",50));
@@ -24,22 +25,24 @@ public class PruebaSort{
         for(Personaje p : ts) {
             System.out.println(p);
         }
+        System.out.println("***********");
 
-        LinkedList <Personaje> is = new LinkedList<Personaje>();
+        LinkedList <Personaje> ld = new LinkedList<Personaje>();
 
-        is.add(new Planta("Cristian",70));
-        is.add(new Planta("Karen",50));
-        is.add(new Zombie("Hanna",80,false));
-        is.add(new Zombie("Esmeralda",80,false));
-        is.add(new Planta("Miguel", 99));
-        is.add(new Planta("Jaime",50));
-        is.add(new Zombie("Cristian",80,false));
-        is.add(new Zombie("Miguel",80,false));
-        is.add(new Planta("Karen",50));
+        ld.add(new Planta("Cristian",70));
+        ld.add(new Planta("Karen",50));
+        ld.add(new Zombie("Hanna",80,false));
+        ld.add(new Zombie("Erick", false));
+        ld.add(new Zombie("Esmeralda",80,false));
+        ld.add(new Planta("Miguel", 99));
+        ld.add(new Planta("Jaime",50));
+        ld.add(new Zombie("Cristian",80,false));
+        ld.add(new Zombie("Miguel",80,false));
+        ld.add(new Planta("Karen",50));
 
-        Collections.sort(is,new SortId());
+        Collections.sort(ld,new SortId());
 
-        for(Object o : is) {
+        for(Object o : ld) {
             System.out.println(o);
         }
         
