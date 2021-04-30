@@ -80,4 +80,6 @@ public abstract class Personaje implements Comparable <Personaje>{
         return id;
     }
 
+    //Voy a empezar
+
 }
