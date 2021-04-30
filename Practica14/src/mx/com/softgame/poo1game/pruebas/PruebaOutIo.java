@@ -1,5 +1,7 @@
 package x.com.softgame.poo1game.pruebas;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
 import mx.com.softgame.poo1game.personajes.Personaje;
@@ -7,18 +9,27 @@ import mx.com.softgame.poo1game.personajes.Personaje;
 
 public class PruebaOutIo implements Serializable {
     public static void main(String[] args) {
-       Personaje p;
-       try {
-           FileInputStream a = new FileInputStream("pvsz.out");
-           ObjectInputStream f = new ObjectInputStream(a);
+       String f = System.getProperty("user.home")+System.getProperty("file.separator")+"pvsz.out";
+       File sFile = new File(f);
 
-           while(s.readObjct()!=null){
-               p = (Personaje)s.readObject();
-               System.out.println(p);
+       if(sFile.exists()){
+           try {
+               FileInputStream input = new FileInputStream(f);
+               ObjectInputStream bufInput = new ObjectInputStream(input);
+               Personaje personajes = (personajes)bufInput.readObject();
+               while(personajes!=null){
+                   System.out.println(personajes);
+                   personajes = (Personaje) bufInput.readObject();
+               }
+
+               bufInput.close();
+
+           } catch (IOException e) {
+               e.printStackTrace();
            }
-           s.close();
-       } catch (Exception e) {
-           //TODO: handle exception
+       }else{
+           System.out.println("No existe");
        }
     }
 }
+
