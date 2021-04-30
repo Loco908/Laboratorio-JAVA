@@ -4,8 +4,10 @@ import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-
+import java.io.IOException;
 import mx.com.softgame.poo1game.personajes.Personaje;
+import mx.com.softgame.poo1game.personajes.malos.Zombie;
+import mx.com.softgame.poo1game.personajes.buenos.Planta;
 
 public class PruebaIO{
     public static void main(String[] args) {
@@ -26,14 +28,22 @@ public class PruebaIO{
                 String line = null;
                 int count = Integer.parseInt(br.readLine());
                 int i=0;
-
                 while(i<count){
                     line=br.readLine();
                     String[] par = line.split(",");
+                    if (par[0]=="Z") {
+                        personajes.add(new Zombie(par[1]));
+                    } else {
+                        personajes.add(new Planta(par[1]));
+                    }
+                    i++;
                 }
+                System.out.println(personajes);
+                br.close();
 
-                
-            }   
-        }
+            } catch(IOException e){
+
+            }
+        }   
     }
 }
