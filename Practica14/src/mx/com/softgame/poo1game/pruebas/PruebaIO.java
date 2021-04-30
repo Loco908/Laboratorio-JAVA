@@ -34,7 +34,7 @@ public class PruebaIO{
                 while(i<count){
                     line=br.readLine();
                     String[] par = line.split(",");
-                    if (par[0]=="Z") {
+                    if (par[0].equals("Z")) {
                         personajes.add(new Zombie(par[1]));
                     } else {
                         personajes.add(new Planta(par[1]));
@@ -52,11 +52,11 @@ public class PruebaIO{
         }
         try {
             //Crea el interfaz dek archivo
-            FileOutputStream output = new FileOutputStream(myFile);
+            FileOutputStream output = new FileOutputStream(archivo);
             //Para no dañar el original
             ObjectOutputStream bufOutput = new ObjectOutputStream(output);
             fli = sc.nextLine();
-            bufOutput.writeObject(fli);
+            bufOutput.write(fli);
             bufOutput.close();//Se cierra el bufOut y se escibre en el archivo original
         } catch (Exception e) {
             //TODO: handle exception
