@@ -3,8 +3,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+
 import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.personajes.malos.Zombie;
 import mx.com.softgame.poo1game.personajes.buenos.Planta;
@@ -42,8 +45,21 @@ public class PruebaIO{
                 br.close();
 
             } catch(IOException e){
-
+                e.printStackTrace();
             }
+        }else{
+            System.out.println("No existe");
+        }
+        try {
+            //Crea el interfaz dek archivo
+            FileOutputStream output = new FileOutputStream(myFile);
+            //Para no dañar el original
+            ObjectOutputStream bufOutput = new ObjectOutputStream(output);
+            fli = sc.nextLine();
+            bufOutput.writeObject(fli);
+            bufOutput.close();//Se cierra el bufOut y se escibre en el archivo original
+        } catch (Exception e) {
+            //TODO: handle exception
         }   
     }
 }
