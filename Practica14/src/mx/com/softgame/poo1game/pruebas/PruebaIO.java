@@ -22,7 +22,17 @@ public class PruebaIO{
             ArrayList <Personaje> personajes = new ArrayList<Personaje>();
             try{
                 FileReader fr = new FileReader(archivo);
-                BufferedReader br = new BufferedReader(archivo);
+                BufferedReader br = new BufferedReader(fr);
+                String line = null;
+                int count = Integer.parseInt(br.readLine());
+                int i=0;
+
+                while(i<count){
+                    line=br.readLine();
+                    String[] par = line.split(",");
+                }
+
+                
             }   
         }
     }
