@@ -49,14 +49,14 @@ public class PruebaIO{
         }else{
             System.out.println("No existe");
         }
-        try {
-            FileOutputStream output = new FileOutputStream(archivo);
-            ObjectOutputStream bufOutput = new ObjectOutputStream(output);
-            for(Personaje p: personajes){
-                bufOutput.writeObject(fli);
-            }
+            try {
+                FileOutputStream output = new FileOutputStream(archivo);
+                ObjectOutputStream bufOutput = new ObjectOutputStream(output);
+                for(Personaje p: personajes){
+                    bufOutput.writeObject(fli);
+                }
            
-        } catch (IOException w) {
+            } catch (IOException w) {
         
         }   
     }
