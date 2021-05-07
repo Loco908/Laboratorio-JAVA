@@ -19,9 +19,24 @@ public class VentanaPrincipal{
         IbiFile = new JLabel("Nombre del archivo:");
         txFile = new JTextField(20);
         btnOpen = new JButton("Abrir archivo");
-        txtContenido = new JTextArea(int 30, int 40);
+        txtContenido = new JTextArea(30, 40);
         IbLeidos = new JLabel("Archivos leidos");
-        IbiN = new JLabel(CERO 0);
+        IbiN = new JLabel("CERO");
         btnExit = new JButton("Salir");
+    }
+
+    public void initComponents(){
+        f.setLayout(new FlowLayout());
+        f.add(IbiFile);
+        f.add(txFile);
+        f.add(btnOpen);
+        f.add(txtContenido);
+        f.add(IbLeidos);
+        f.add(IbiN);
+        f.add(btnExit);
+        f.setSize(550, 440);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setVisible(true);
+
     }
 }
