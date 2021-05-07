@@ -1,5 +1,6 @@
 package mx.com.softgame.poo1game.ventanas;
 
+import javax.swing.Action;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -33,6 +34,12 @@ public class VentanaPrincipal{
         f.add(IbiFile);
         f.add(txFile);
         f.add(btnOpen);
+        btnOpen.addActionListener(new ActionListener(){
+            public void actionPerformerd(ActionEvent av){
+                openFile();
+            }
+
+        }
         f.add(txtContenido);
         f.add(IbLeidos);
         f.add(IbiN);
