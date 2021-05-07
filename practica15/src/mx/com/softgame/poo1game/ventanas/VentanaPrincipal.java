@@ -108,8 +108,15 @@ public class VentanaPrincipal{
         }
     }
 
-    public void getList(File f) {
-        
+    public void getList(File archivo) {
+        String[] list = archivo.list();
+        if (list == null || list.length == 0) {
+            System.out.println("No hay elementos");
+        } else {
+            for(int i = 0; i < list.length; i++){
+                System.out.println(list[i]);
+            }
+        }
     }
 
 }
