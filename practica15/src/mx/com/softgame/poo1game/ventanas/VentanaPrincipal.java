@@ -1,8 +1,11 @@
+package mx.com.softgame.poo1game.ventanas;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import java.awt.FlowLayout;
 
 public class VentanaPrincipal{
     JFrame f;
@@ -37,6 +40,10 @@ public class VentanaPrincipal{
         f.setSize(550, 440);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
+    }
 
+    public static void main(String[] args) {
+        VentanaPrincipal v = new VentanaPrincipal();
+        v.initComponents();
     }
 }
