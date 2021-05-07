@@ -9,7 +9,10 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class VentanaPrincipal{
@@ -79,11 +82,26 @@ public class VentanaPrincipal{
             JOptionPane.showMessageDialog(f, "No existe");
             return;
         }
-        if(!archivo.isFile()){
-            JOptionPane.showMessageDialog(f, "No existe");
-            return;
-
+        if(archivo.isFile()){
+            getContenido(archivo);
+        }else {
+            getList(archivo);
         }
+    }
+
+    public void getContenido(File f) {
+        try {
+            FileReader r = new FileReader(f);
+            BufferedReader b = new BufferedReader(r);
+            int count;
+
+        } catch (IOException e) {
+            System.err.println(e);
+        }
+    }
+
+    public void getList(File f) {
+        
     }
 
 }
