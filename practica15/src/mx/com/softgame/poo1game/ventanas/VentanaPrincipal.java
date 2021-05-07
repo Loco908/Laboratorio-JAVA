@@ -4,6 +4,7 @@ import javax.swing.Action;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import java.awt.FlowLayout;
@@ -68,8 +69,17 @@ public class VentanaPrincipal{
 
     public void openFile() {
         String file = txFile.getText();
-        String path = System.getProperty("user.home");
+        String path = System.getProperty("user.home") + System.getProperty("file.separator") + file;
         System.out.println(path);
+        txtContenido.setText("");
+        File archivo = new File(path);
+        if (!archivo.exists()) {
+            JOptionPane.showMessageDialog("No existe");
+            return;
+        }
+        if(archivo.isFile()){
+
+        }
     }
 
 }
