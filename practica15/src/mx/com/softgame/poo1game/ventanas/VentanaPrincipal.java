@@ -90,10 +90,18 @@ public class VentanaPrincipal{
     }
 
     public void getContenido(File f) {
+        String lineas;
         try {
             FileReader r = new FileReader(f);
             BufferedReader b = new BufferedReader(r);
-            int count;
+            int count = 0;
+            while((lineas = b.readLine()) != null){
+                txtContenido.append(lineas + "\n");
+                System.out.println(lineas);
+                count = lineas.length();
+            }
+            b.close();
+            IbiN.setText(Integer.toString(count));
 
         } catch (IOException e) {
             System.err.println(e);
