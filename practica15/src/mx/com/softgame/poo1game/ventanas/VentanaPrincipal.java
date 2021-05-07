@@ -7,6 +7,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaPrincipal{
     JFrame f;
@@ -34,16 +36,22 @@ public class VentanaPrincipal{
         f.add(IbiFile);
         f.add(txFile);
         f.add(btnOpen);
-        btnOpen.addActionListener(new ActionListener(){
+        btnOpen.addActionListener(new ActionListener() {
             public void actionPerformerd(ActionEvent av){
                 openFile();
             }
 
-        }
+        });
         f.add(txtContenido);
         f.add(IbLeidos);
         f.add(IbiN);
         f.add(btnExit);
+        btnExit.addActionListener(new ActionListener() {
+            public void actionPerformerd(ActionEvent av) {
+                dispose();
+            }
+
+        });
         f.setSize(550, 440);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
