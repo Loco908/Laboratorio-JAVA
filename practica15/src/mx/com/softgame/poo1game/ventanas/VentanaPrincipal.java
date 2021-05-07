@@ -73,11 +73,15 @@ public class VentanaPrincipal{
         System.out.println(path);
         txtContenido.setText("");
         File archivo = new File(path);
+
+
         if (!archivo.exists()) {
-            JOptionPane.showMessageDialog("No existe");
+            JOptionPane.showMessageDialog(f, "No existe");
             return;
         }
-        if(archivo.isFile()){
+        if(!archivo.isFile()){
+            JOptionPane.showMessageDialog(f, "No existe");
+            return;
 
         }
     }
