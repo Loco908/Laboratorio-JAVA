@@ -8,6 +8,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.awt.event.ActionEvent;
 
 public class VentanaPrincipal{
@@ -37,28 +38,38 @@ public class VentanaPrincipal{
         f.add(txFile);
         f.add(btnOpen);
         btnOpen.addActionListener(new ActionListener() {
-            public void actionPerformerd(ActionEvent av){
+            public void actionPerformed(ActionEvent av){
                 openFile();
             }
-
         });
+
+        
         f.add(txtContenido);
         f.add(IbLeidos);
         f.add(IbiN);
         f.add(btnExit);
         btnExit.addActionListener(new ActionListener() {
-            public void actionPerformerd(ActionEvent av) {
-                dispose();
+            public void actionPerformed(ActionEvent av) {
+                f.dispose();
             }
 
         });
         f.setSize(550, 440);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
+
+
     }
 
     public static void main(String[] args) {
         VentanaPrincipal v = new VentanaPrincipal();
         v.initComponents();
     }
+
+    public void openFile() {
+        String file = txFile.getText();
+        String path = System.getProperty("user.home");
+        System.out.println(path);
+    }
+
 }
