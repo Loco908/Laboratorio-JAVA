@@ -5,7 +5,11 @@ public class Hilo extends Thread {
 
     public Hilo(String name, JLabel etiqueta) {
         this.name = name;
-        this.etiqueta = etiqueta;
-        
+        this.etiqueta = etiqueta; 
+    }
+
+    public void run(){
+        String str;
+        for(int i)
     }
 }
