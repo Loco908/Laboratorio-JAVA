@@ -1,9 +1,11 @@
+package mx.com.softgame.poo1game.ventanas;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import java.awt.GridLayout;
+import mx.com.softgame.poo1game.Hilos;
 
 public class VentanaHilo extends JFrame {
     JMenuBar menuBar;
@@ -65,6 +67,12 @@ public class VentanaHilo extends JFrame {
 
     public VentanaHilo(){
         initComponents();
+    }
+    public void iniciarHilos() {
+        Hilo m1 = new Hilo("m1", IbiA);
+        Hilo m2 = new Hilo("m2", IbiB);
+        Hilo m3 = new Hilo("m3", IbiC);
+        Hilo m4 = new Hilo("m4", IbiD);
     }
     
 }
