@@ -5,7 +5,6 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 public class VentanaHilo extends JFrame {
-    JFrame f;
     JMenuBar menuBar;
     JLabel IbiA;
     JLabel IbiB;
@@ -26,10 +25,16 @@ public class VentanaHilo extends JFrame {
     }
 
     public void initComponents(){
-        f.setLayout(new GridLayout(4,1));
-        f = new JFrame("MenuBar");
-        mb = new JMenuBar();
-        f.setJMenuBar(mb);
+        this.setLayout(new GridLayout(4,1));
+        menuBar = new JMenuBar();
+        this.setJMenuBar(menuBar);
+        mnuArchivo = new JMenu();
+        this.setJMenu(mnuArchivo);
+        mnuInicio = new JMenuItem();
+        this.setJMenuItem(mnuInicio);
+        mnuSalir = new JMenuItem();
+        this.setJMenuItem(mnuSalir);
+
     }
     
 }
