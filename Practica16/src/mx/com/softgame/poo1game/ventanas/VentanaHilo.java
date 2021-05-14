@@ -25,7 +25,8 @@ public class VentanaHilo extends JFrame {
     }
 
     public void initComponents(){
-        LayoutManager layaout = new GridLayaout(4, 1)
+        LayoutManager layaout = new GridLayaout(4, 1);
+        setLayout(layaout);
     }
     
 }
