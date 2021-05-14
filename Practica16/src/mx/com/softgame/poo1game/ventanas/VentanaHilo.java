@@ -20,27 +20,24 @@ public class VentanaHilo extends JFrame {
     JMenuItem mnuSalir;
 
     public void initComponents(){
+        menuBar = new JMenuBar();
+
         IbiA = new JLabel("Texto A");
         IbiB = new JLabel("Texto B");
         IbiC = new JLabel("Texto C");
         IbiD = new JLabel("Texto D");
-        mnuArchivo = new JMenu("Texto Archivo");
-        mnuInicio = new JMenuItem("Texto Inicio");
-        mnuSalir = new JMenuItem("Texto Salir");
+        mnuArchivo = new JMenu("Archivo");
+        mnuInicio = new JMenuItem(" Inicio");
+        mnuSalir = new JMenuItem("Salir");
+
 
         this.setLayout(new GridLayout(4,1));
 
-        menuBar = new JMenuBar();
-        this.setJMenuBar(menuBar);
-
-        mnuArchivo = new JMenu();
-        mnuInicio = new JMenuItem();
-        mnuSalir = new JMenuItem();
-        IbiA = new JLabel();
 
         mnuArchivo.add(mnuInicio);
         mnuArchivo.add(mnuSalir);
-
+        menuBar.add(mnuArchivo);
+        this.setJMenuBar(menuBar);
         this.add(IbiA);
         this.add(IbiB);
         this.add(IbiC);
@@ -71,6 +68,10 @@ public class VentanaHilo extends JFrame {
         Hilo m2 = new Hilo("m2", IbiB);
         Hilo m3 = new Hilo("m3", IbiC);
         Hilo m4 = new Hilo("m4", IbiD);
+        m1.start();
+        m2.start();
+        m3.start();
+        m4.start();
     }
 
 }
