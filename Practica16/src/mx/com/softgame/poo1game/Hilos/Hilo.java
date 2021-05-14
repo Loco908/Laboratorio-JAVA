@@ -15,11 +15,17 @@ public class Hilo extends Thread {
         for(int i = 0; i < 30; i++ ){
             str = etiqueta.getText();
             c = str.charAt(str.length()-1);
-            str = etiqueta.setText();
-            n = (int) (Math.random()*1000)
-            Thread.sleep(n);
-            str = etiqueta.setText("HECHO");
+            str = etiqueta.setText(str);
+            n = (int) (Math.random()*1000);
+            str = etiqueta.setText("Hecho");
             str = etiqueta.getText();
+            try {
+                Thread.sleep(n);
+                
+            } catch (InterruptedException e) {
+
+            }
+            Thread.sleep(n);
         }
     }
 }
