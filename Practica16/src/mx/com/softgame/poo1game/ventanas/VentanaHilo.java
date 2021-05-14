@@ -27,7 +27,7 @@ public class VentanaHilo extends JFrame {
         IbiC = new JLabel("Texto C");
         IbiD = new JLabel("Texto D");
         mnuArchivo = new JMenu("Archivo");
-        mnuInicio = new JMenuItem(" Inicio");
+        mnuInicio = new JMenuItem("Inicio");
         mnuSalir = new JMenuItem("Salir");
 
 

@@ -25,7 +25,7 @@ public class Hilo extends Thread {
                 System.err.println(e);
             }
         }
-        str += "Hecho";
+        str += " Hecho";
         etiqueta.setText(str);
     }
 }
