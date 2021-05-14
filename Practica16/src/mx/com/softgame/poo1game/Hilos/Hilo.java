@@ -9,23 +9,22 @@ public class Hilo extends Thread {
     }
 
     public void run(){
-        String str;
+        String str = "";
         char c;
         int n;
         for(int i = 0; i < 30; i++ ){
             str = etiqueta.getText();
             c = str.charAt(str.length()-1);
-            str = etiqueta.setText(str);
+            str += c;
+            etiqueta.setText(str);
             n = (int) (Math.random()*1000);
-            str = etiqueta.setText("Hecho");
-            str = etiqueta.getText();
             try {
-                Thread.sleep(n);
-                
+                Thread.sleep(n);    
             } catch (InterruptedException e) {
-
+                System.err.println(e);
             }
-            Thread.sleep(n);
         }
+        str += "Hecho";
+        etiqueta.setText(str);
     }
 }
