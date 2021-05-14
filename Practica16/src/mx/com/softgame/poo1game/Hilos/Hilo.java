@@ -1,4 +1,4 @@
-package mx.com.softgame.poo1game.Hilos;
+package mx.com.softgame.poo1game.hilos;
 import javax.swing.JLabel;
 
 public class Hilo extends Thread {

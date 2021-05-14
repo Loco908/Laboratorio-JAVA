@@ -5,7 +5,9 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import java.awt.GridLayout;
-import mx.com.softgame.poo1game.Hilos;
+import mx.com.softgame.poo1game.hilos.Hilo;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaHilo extends JFrame {
     JMenuBar menuBar;
@@ -62,7 +64,7 @@ public class VentanaHilo extends JFrame {
         }); 
 
         this.setSize(400, 600);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public VentanaHilo(){
@@ -74,5 +76,5 @@ public class VentanaHilo extends JFrame {
         Hilo m3 = new Hilo("m3", IbiC);
         Hilo m4 = new Hilo("m4", IbiD);
     }
-    
+
 }
