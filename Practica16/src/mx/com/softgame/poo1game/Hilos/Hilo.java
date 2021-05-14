@@ -18,6 +18,8 @@ public class Hilo extends Thread {
             str = etiqueta.setText();
             n = (int) (Math.random()*1000)
             Thread.sleep(n);
+            str = etiqueta.setText("HECHO");
+            str = etiqueta.getText();
         }
     }
 }
