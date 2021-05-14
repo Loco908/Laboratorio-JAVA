@@ -10,6 +10,11 @@ public class Hilo extends Thread {
 
     public void run(){
         String str;
-        for(int i)
+        char c;
+        for(int i = 0; i < 30; i++ ){
+            str = etiqueta.getText();
+            c = str.charAt(str.length()-1);
+            str = etiqueta.setText();
+        }
     }
 }
