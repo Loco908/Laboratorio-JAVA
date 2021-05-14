@@ -19,7 +19,13 @@ public class VentanaHilo extends JFrame {
         IbiB = new JLabel("Texto B");
         IbiC = new JLabel("Texto C");
         IbiD = new JLabel("Texto D");
-        
+        mnuArchivo = new JMenu("Texto Archivo");
+        mnuInicio = new JMenuItem("Texto Inicio");
+        mnuSalir = new JMenuItem("Texto Salir");
+    }
+
+    public void initComponents(){
+        LayoutManager layaout = new GridLayaout(4, 1)
     }
     
 }
