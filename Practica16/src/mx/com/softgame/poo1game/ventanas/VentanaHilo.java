@@ -45,8 +45,7 @@ public class VentanaHilo extends JFrame {
 
         mnuSalir.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                dispose();
-               
+                dispose();   
             }
         }); 
 
