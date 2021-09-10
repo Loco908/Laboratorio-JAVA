@@ -1,0 +1,33 @@
+public class PersonajeLuis {
+    private int edad;
+    private String nombre;
+
+    public PersonajeLuis(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() { 
+        return edad;
+    }
+
+    public boolean setEdad(int edad){
+        if(edad >= 0 && edad <=120) {
+            this.edad = edad;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void saludar() {
+        System.out.println("Hola Alumno de POO " +" "+  nombre);
+    }
+}
